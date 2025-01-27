@@ -309,8 +309,10 @@ GameObject:
   - component: {fileID: 1715420668}
   - component: {fileID: 1715420667}
   - component: {fileID: 1715420669}
-  - component: {fileID: 1715420671}
   - component: {fileID: 1715420672}
+  - component: {fileID: 1715420671}
+  - component: {fileID: 1715420673}
+  - component: {fileID: 1715420674}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -358,7 +360,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 8082355449996690663, guid: 9a42abc7a5a495947b525f0605295832, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,8 +381,8 @@ Transform:
   m_GameObject: {fileID: 1715420666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -1.01, z: -1}
-  m_LocalScale: {x: 4.0584, y: 3.6224, z: 1}
+  m_LocalPosition: {x: -0.023433818, y: -1.5457873, z: -1}
+  m_LocalScale: {x: 1.2666267, y: 1.2747226, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -458,9 +460,34 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010000005, y: 0.31}
-  m_Size: {x: 0.32, y: 0.46000004}
+  m_Offset: {x: -0.0007964765, y: 0.0006801552}
+  m_Size: {x: 0.31999987, y: 0.48503304}
   m_Direction: 0
+--- !u!114 &1715420673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715420666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f005fb58c2a88ef4fa1d06f6bf288757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 362792079085242351, guid: b6aeb8744b0e5f5498628ad36362f7d2, type: 3}
+--- !u!114 &1715420674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715420666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf80a35cc132d4342a1c4abb5bfdffee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

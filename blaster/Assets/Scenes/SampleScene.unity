@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1715420673}
   - component: {fileID: 1715420674}
   m_Layer: 0
-  m_Name: ship
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

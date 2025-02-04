@@ -12,7 +12,7 @@ public class shipMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();        
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
@@ -22,8 +22,9 @@ public class shipMovement : MonoBehaviour
         float rotation = -Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
         transform.Rotate(0, 0, rotation);
 
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
+             
             rb.AddForce(transform.up * thrustSpeed * Time.deltaTime);
         }
     }

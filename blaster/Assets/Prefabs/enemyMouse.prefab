@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3549617384233829077}
   - component: {fileID: 2526092595085823386}
   - component: {fileID: 4852730845149922069}
+  - component: {fileID: -5171775793516377156}
   m_Layer: 0
   m_Name: enemyMouse
   m_TagString: Untagged
@@ -182,3 +183,15 @@ PolygonCollider2D:
       - {x: 0.27850556, y: 0.4564788}
       - {x: 0.25524724, y: 0.525458}
   m_UseDelaunayMesh: 0
+--- !u!114 &-5171775793516377156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031433421725160956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf80a35cc132d4342a1c4abb5bfdffee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

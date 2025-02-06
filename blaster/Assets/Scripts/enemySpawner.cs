@@ -5,14 +5,18 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float spawnRate = 2f;
-
+    public float spawnDistance = 2f;
+    public float level = 0;
+    public int enemyCount = 4;
+    public float enemySpeed = 5;
     private Camera mainCam;
     // Start is called before the first frame update
     void Start()
     {
         mainCam = Camera.main;
-        InvokeRepeating("SpawnEnemy", 0f, spawnRate);
+        for(int i = 0;i < enemyCount + (2 * level);i++){
+            SpawnEnemy();
+        }
     }
 
     // Update is called once per frame
@@ -26,29 +30,36 @@ public class enemySpawner : MonoBehaviour
         int side = Random.Range(0, 4);
         Vector2 spawnPos = Vector2.zero;
         
+        float camHeight = mainCam.orthographicSize;
+        float camWidth = camHeight * mainCam.aspect;
+
         //top
         if(side == 0){
-
+            spawnPos = new Vector2(Random.Range(-camWidth, camWidth), camHeight + spawnDistance);
         }
         //bottom
         else if(side == 1){
-
+            spawnPos = new Vector2(Random.Range(-camWidth, camWidth), -camHeight + -spawnDistance);
         }
         //left
         else if(side == 2){
-
+            spawnPos = new Vector2(-camWidth - spawnDistance, Random.Range(-camHeight, camHeight));
         }
         //right
         else if(side == 3){
-
+            spawnPos = new Vector2(camWidth + spawnDistance, Random.Range(-camHeight, camHeight));
         }
-        float randomX = Random.Range(0f, 1f);
-        float randomY = Random.Range(0f, 1f);
 
-        Vector3 spawnPosition = Camera.main.ViewportToWorldPoint(new Vector3(randomX, randomY, 0));
-        spawnPosition.z = 0;
+        GameObject createdEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        Rigidbody2D rb = createdEnemy.GetComponent<Rigidbody2D>();
 
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        float randomAngle = Random.Range(0f, 360f);
+    
+        Vector2 moveDirection = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad));
+
+        rb.velocity = moveDirection * enemySpeed;
+
+
     }
 
 }

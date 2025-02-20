@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4852730845149922069}
   - component: {fileID: -5171775793516377156}
   - component: {fileID: -5345388774159922727}
+  - component: {fileID: -5258417455041991828}
+  - component: {fileID: -6597120948398308616}
   m_Layer: 0
   m_Name: enemyMouseMedium
   m_TagString: EnemyMedium
@@ -150,7 +152,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.45762712, y: -0.1764706}
+    pivot: {x: 0.48548922, y: 0.5004147}
     oldSize: {x: 0.59, y: 0.51}
     newSize: {x: 0.23, y: 0.29}
     adaptiveTilingThreshold: 0.5
@@ -208,3 +210,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b100bba9c6e004a709bb5a3199bfd320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5258417455041991828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031433421725160956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4305ecd7da874c50a267d3217106531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 4517891840432567368, guid: 1607efaf8984049f5888f1137502ae37, type: 3}
+--- !u!114 &-6597120948398308616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031433421725160956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc65d6a69f31f402e8ed716734f4a3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 2

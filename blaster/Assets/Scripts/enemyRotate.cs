@@ -1,22 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class enemyRotate : MonoBehaviour
 {
     private float rotationSpeed;
-    private Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rotationSpeed = Random.Range(40f, 100f);
+        rotationSpeed = Random.Range(50f, 200f);
+        if (Random.value > 0.5f) // 50% chance to be negative
+        {
+            rotationSpeed *= -1;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float rotationStep = rotationSpeed * Time.deltaTime;
-        rb.MoveRotation(rb.rotation + rotationStep);
+        transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
     }
+
 }

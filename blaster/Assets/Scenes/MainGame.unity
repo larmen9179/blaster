@@ -10007,7 +10007,6 @@ MonoBehaviour:
   spawnDistance: 0.5
   level: 0
   enemyCount: 4
-  enemySpeed: 1.5
 --- !u!1 &1715420666
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69876b6bd728b4dd8b4ba158a343d87f
+guid: 0d59696a759464621a39c1ad9e00d051
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: enemyMouse
+  - name: cheese
     originalName: 
-    pivot: {x: 0.48548922, y: 0.5004147}
+    pivot: {x: 0.49090907, y: -0.1764706}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 59
+      width: 55
       height: 51
-    spriteID: a5ca282c56e69449e8b084d62012d419
+    spriteID: 37beca965491445e1843926ab6e6f953
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1613677797
-    name: enemyMouse
+    guid: -1753514755
+    name: cheese
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: enemyMouse
+    - name: cheese
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 5
         y: 9
-        width: 59
+        width: 55
         height: 51
-      spriteId: a5ca282c56e69449e8b084d62012d419
+      spriteId: 37beca965491445e1843926ab6e6f953
     linkedCells: []
     parentIndex: -1
   platformSettings: []

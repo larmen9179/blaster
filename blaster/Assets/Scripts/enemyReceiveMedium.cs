@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class enemyDamage : MonoBehaviour
 {
-    public GameObject minion;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +20,11 @@ public class enemyDamage : MonoBehaviour
     {
         if(collision.tag == "Bullet"){
             Destroy(collision.gameObject);
-            Destroy(gameObject);
 
-            Vector2 killedPosition = (Vector2)transform.position;
+            health health = GetComponent<health>();
+            damageDealer damageDealer = collision.GetComponent<damageDealer>();
 
-            for(int i = 0;i < 3;i++){
-                Instantiate(minion, killedPosition, Quaternion.identity);
-            }
+            health.takeDamage(damageDealer.getDamage());
             
         }
     }

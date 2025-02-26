@@ -19,7 +19,7 @@ public class enemyReceiveSmall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Bullet"){
+        if(collision.tag == "playerBullet"){
             Destroy(collision.gameObject);
 
             ParticleSystem explosion = Instantiate(cheeseExplode, transform.position, Quaternion.identity);

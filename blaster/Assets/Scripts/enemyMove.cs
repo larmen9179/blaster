@@ -7,7 +7,7 @@ using Vector2 = UnityEngine.Vector2;
 public class enemyMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float enemySpeed = 5;
+    public int enemySpeed = 5;
     void Start()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();

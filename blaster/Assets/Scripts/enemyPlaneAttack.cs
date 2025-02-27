@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class KamikazeBomber : MonoBehaviour
+public class enemyPlaneAttack : MonoBehaviour
 {
     public float initialSpeed = 3f;  // Base movement speed
     public float speedIncreaseRate = 0.5f;  // How much speed increases per second

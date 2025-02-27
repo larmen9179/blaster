@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyDamage : MonoBehaviour
+public class enemyReceivePlane : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,11 @@ public class enemyDamage : MonoBehaviour
     {
         if(collision.tag == "playerBullet"){
             Destroy(collision.gameObject);
-
-            enemyHealthMedium enemyHealth = GetComponent<enemyHealthMedium>();
+            enemyPlaneHealth planeHealth = GetComponent<enemyPlaneHealth>();
+            
             damageDealer damageDealer = collision.GetComponent<damageDealer>();
 
-            enemyHealth.takeDamage(damageDealer.getDamage());
-            
+            planeHealth.takeDamage(damageDealer.getDamage());
         }
     }
 }

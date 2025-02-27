@@ -8,6 +8,7 @@ TagManager:
   - EnemySmall
   - playerBullet
   - enemyBullet
+  - enemyPlane
   layers:
   - Default
   - TransparentFX

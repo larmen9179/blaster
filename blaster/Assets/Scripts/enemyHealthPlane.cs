@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyHealthMedium : MonoBehaviour
+public class enemyPlaneHealth : MonoBehaviour
 {
-    public GameObject minion;
     public int maxHealth;
     private int currentHealth;
     // Start is called before the first frame update
@@ -19,18 +18,11 @@ public class enemyHealthMedium : MonoBehaviour
         
     }
 
-    public void takeDamage(int damage)
-    {
-       currentHealth -= damage;
+    public void takeDamage(int damage){
+        currentHealth -= damage;
         if(currentHealth <= 0){
             Destroy(gameObject);
 
-            Vector2 killedPosition = (Vector2)transform.position;
-
-            for (int i = 0; i < 3; i++)
-            {
-                Instantiate(minion, killedPosition, Quaternion.identity);
-            }
         }
     }
 }

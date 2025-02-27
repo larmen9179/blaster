@@ -2,24 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPlaneSpawner : MonoBehaviour
+public class enemyTankSpawner : MonoBehaviour
 {
-    public float spawnChance;
-    public GameObject enemyPlane;
-    private Camera mainCam;
-    private float spawnDistance = 2f;
-    //private float padding = 5;
     // Start is called before the first frame update
+    private float spawnDistance = 40f;
+    private Camera mainCam;
+    public GameObject tank;
     void Start()
     {
-
         mainCam = Camera.main;
-        //change this later
-        //as of right now this code will spawn a ship no matter what for testing
-        float randomChance = Random.Range(spawnChance, spawnChance);
-        //if(randomChance <= spawnChance){
-            //spawnPlane();
-        //}
+        spawnTank();
     }
 
     // Update is called once per frame
@@ -28,8 +20,7 @@ public class enemyPlaneSpawner : MonoBehaviour
         
     }
 
-    private void spawnPlane(){
-
+    private void spawnTank(){
         int side = Random.Range(0, 4);
         Vector2 spawnPos = Vector2.zero;
         
@@ -54,6 +45,6 @@ public class enemyPlaneSpawner : MonoBehaviour
         }
 
         //GameObject createdEnemy = 
-        Instantiate(enemyPlane, spawnPos, Quaternion.identity);
+        Instantiate(tank, spawnPos, Quaternion.identity);
     }
 }

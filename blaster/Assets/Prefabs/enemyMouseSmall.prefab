@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1332682305069162578}
   - component: {fileID: 4801099010156862629}
   - component: {fileID: 7202193103845446997}
-  - component: {fileID: 3254871885221702947}
+  - component: {fileID: 6879279625283927283}
   m_Layer: 0
   m_Name: enemyMouseSmall
   m_TagString: EnemySmall
@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.66716, y: -0.76118, z: 0}
-  m_LocalScale: {x: 0.714283, y: 0.714283, z: 0.714283}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.714283}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -6526456537689198954, guid: 69876b6bd728b4dd8b4ba158a343d87f, type: 3}
+  m_Sprite: {fileID: 5552249727490022236, guid: bb4334a17fc0b40009255d54658eb7ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheeseExplode: {fileID: 1345168256337781641, guid: 432e468fbd06848de8475c744b99efbd, type: 3}
---- !u!61 &3254871885221702947
-BoxCollider2D:
+--- !u!60 &6879279625283927283
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -199,16 +199,30 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007823467, y: -0.006958246}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.48548922, y: 0.5004147}
-    oldSize: {x: 0.59, y: 0.51}
+    pivot: {x: 0.44761094, y: 0.4217707}
+    oldSize: {x: 0.59, y: 0.45}
     newSize: {x: 0.23, y: 0.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.52638793, y: 0.49650657}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.049520254, y: 0.22866708}
+      - {x: 0.029982785, y: 0.26170108}
+      - {x: -0.034979954, y: 0.2642796}
+      - {x: -0.038912512, y: 0.23295529}
+      - {x: -0.104214415, y: 0.16995098}
+      - {x: -0.11607129, y: 0.14977893}
+      - {x: -0.2663832, y: -0.09006278}
+      - {x: -0.26635304, y: -0.18294212}
+      - {x: 0.2691842, y: -0.19139735}
+      - {x: 0.27189246, y: -0.12824853}
+      - {x: 0.21397063, y: -0.01850095}
+      - {x: 0.19874391, y: 0.052726243}
+      - {x: 0.13576546, y: 0.15083584}
+      - {x: 0.076115705, y: 0.21130142}
+  m_UseDelaunayMesh: 0

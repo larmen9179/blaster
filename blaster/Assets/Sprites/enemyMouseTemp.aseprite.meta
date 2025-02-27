@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 69876b6bd728b4dd8b4ba158a343d87f
+guid: bb4334a17fc0b40009255d54658eb7ab
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: enemyMouse
+  - name: enemyMouseTemp
     originalName: 
-    pivot: {x: 0.48548922, y: 0.5004147}
+    pivot: {x: 0.44761094, y: 0.4217707}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,8 +131,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 59
-      height: 51
-    spriteID: a5ca282c56e69449e8b084d62012d419
+      height: 45
+    spriteID: 35dbdbee4b07c442797653ba8be69651
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1613677797
-    name: enemyMouse
+    guid: 1883115379
+    name: enemyMouseTemp
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: enemyMouse
+    - name: enemyMouseTemp
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 5
-        y: 9
+        y: 15
         width: 59
-        height: 51
-      spriteId: a5ca282c56e69449e8b084d62012d419
+        height: 45
+      spriteId: 35dbdbee4b07c442797653ba8be69651
     linkedCells: []
     parentIndex: -1
   platformSettings: []

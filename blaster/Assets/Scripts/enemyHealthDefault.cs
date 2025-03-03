@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPlaneHealth : MonoBehaviour
+public class enemyHealthDefault : MonoBehaviour
 {
     public int maxHealth;
     private int currentHealth;
@@ -22,7 +22,6 @@ public class enemyPlaneHealth : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0){
             Destroy(gameObject);
-
         }
     }
 }

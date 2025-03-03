@@ -20,7 +20,7 @@ public class enemyReceivePlane : MonoBehaviour
     {
         if(collision.tag == "playerBullet"){
             Destroy(collision.gameObject);
-            enemyPlaneHealth planeHealth = GetComponent<enemyPlaneHealth>();
+            enemyHealthDefault planeHealth = GetComponent<enemyHealthDefault>();
             
             damageDealer damageDealer = collision.GetComponent<damageDealer>();
 

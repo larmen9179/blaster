@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class enemyReceiveSmall : MonoBehaviour
 {
+    private manageSpawn manageSpawn;
     public ParticleSystem cheeseExplode;
     // Start is called before the first frame update
     void Start()
     {
-        
+        manageSpawn = FindObjectOfType<manageSpawn>();
     }
 
     // Update is called once per frame
@@ -29,4 +30,10 @@ public class enemyReceiveSmall : MonoBehaviour
         }
         
     }
+
+    void OnDestroy(){
+        manageSpawn.enemyDefeated();
+        Debug.Log("small mouse just died");
+    }
+
 }

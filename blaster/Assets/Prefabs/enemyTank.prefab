@@ -144,6 +144,9 @@ MonoBehaviour:
   timer: 0
   timeToSwitch: 2.5
   armored: 1
+  shotPrefab: {fileID: 6085655956318899859, guid: 39f9f7fc7586b4bdb81fdf973f229f7f, type: 3}
+  shootInterval: 0.25
+  shotSpeed: 2.5
 --- !u!114 &7766222450346346426
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class enemyReceiveTank : MonoBehaviour
 {
+    private manageSpawn manageSpawn;
     // Start is called before the first frame update
     void Start()
     {
-        
+        manageSpawn = FindObjectOfType<manageSpawn>();
     }
 
     // Update is called once per frame
@@ -25,5 +26,10 @@ public class enemyReceiveTank : MonoBehaviour
                 e.takeDamage(d.getDamage());
             }
         }
+    }
+    
+    void OnDestroy(){
+        manageSpawn.enemyDefeated();
+        Debug.Log("tank just died");
     }
 }

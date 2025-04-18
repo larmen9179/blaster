@@ -11,17 +11,20 @@ public class manageSpawn : MonoBehaviour
     public GameObject enemyPlane;
     public GameObject enemyTank;
     private Camera mainCam;
+    private GameObject player;
     private float mouseSpawnDistance = 2f;
     private float planeSpawnDistance = 2f;
     private float tankSpawnDistance = 40f;
     private int enemiesAlive;
     private int roundNumber = 0;
     public int baseCount;
+    public bool upgradeChosen = false;
 
     // Start is called before the first frame update
     void Start()
     {
         mainCam = Camera.main;
+        player = GameObject.FindWithTag("Player");
         startRound();
         
     }
@@ -36,11 +39,29 @@ public class manageSpawn : MonoBehaviour
 
     IEnumerator EndRound()
     {
+        //player.SetActive(false);
+        //GameObject.FindWithTag("Player").GetComponent<shipShoot>().enabled = false;
+        player.GetComponent<shipShoot>().enabled = false;
+        player.GetComponent<shipMovement>().enabled = false;
+        //player.GetComponent<playerThrustEffect>().enabled = false;
+
         Debug.Log("new round starting");
-        yield return new WaitForSeconds(5f); // Small delay before next round
+        //yield return new WaitForSeconds(5f); // Small delay before next round
                                              //ShowUpgrades(); // Show upgrade selection screen
 
-        //yield return new WaitUntil(() => upgradeChosen); // Wait for player to choose an upgrade
+        upgradeChosen = false;
+        //turning off the player so they don't move
+        //finding the upgrade manage so we can grab its script
+        //then using the script to call show upgrades all on one line
+        GameObject.FindWithTag("upgradeManager").GetComponent<upgradeManager>().showUpgrades();
+        yield return new WaitUntil(() => upgradeChosen); // Wait for player to choose an upgrade
+
+        player.GetComponent<shipShoot>().enabled = true;
+        player.GetComponent<shipMovement>().enabled = true;
+        //player.GetComponent<playerThrustEffect>().enabled = true;
+        //turning the players movement back on after they choose an upgrade
+        //player.SetActive(true);
+        //GameObject.FindWithTag("Player").GetComponent<shipShoot>().enabled = true;
 
         //roundNumber++;
         //enemiesToSpawn += 2; // Increase enemy count for difficulty
@@ -103,6 +124,8 @@ public class manageSpawn : MonoBehaviour
         {
             baseCount = 8;
         }
+
+        Debug.Log(GameObject.FindWithTag("GameController").GetComponent<manageSpawn>().getEnemiesAlive());
     }
 
     private void spawn(String enemyType){
@@ -152,5 +175,9 @@ public class manageSpawn : MonoBehaviour
 
         //GameObject createdEnemy = 
         Instantiate(g, spawnPos, Quaternion.identity);
+    }
+
+    public int getEnemiesAlive(){
+        return enemiesAlive;
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class damageDealer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int damage;
+    private int damage;
+    private int hits = 1;
     void Start()
     {
         
@@ -19,5 +20,16 @@ public class damageDealer : MonoBehaviour
 
     public int getDamage(){
         return damage;
+    }
+
+    public void setDamage(int damageIn){
+        damage = damageIn;
+    }
+
+    public int getHits(){
+        return hits;
+    }
+    public void setHits(int hitsIn){
+        hits = hitsIn;      
     }
 }

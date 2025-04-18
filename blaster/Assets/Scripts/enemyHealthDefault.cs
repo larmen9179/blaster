@@ -20,7 +20,10 @@ public class enemyHealthDefault : MonoBehaviour
 
     public void takeDamage(int damage){
         currentHealth -= damage;
+
+        
         if(currentHealth <= 0){
+            
             Destroy(gameObject);
         }
     }

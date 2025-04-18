@@ -8,8 +8,11 @@ TagManager:
   - EnemySmall
   - playerBullet
   - enemyBullet
-  - enemyPlane
   - tankBullet
+  - upgradeManager
+  - EnemyPlane
+  - EnemyTank
+  - forceField
   layers:
   - Default
   - TransparentFX
